@@ -1,0 +1,68 @@
+# Python build and cache artifacts
+.venv*/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+secrets/kalshi/
+# Private signing keys (public verification keys live in the tracked trust store)
+.secrets/signing/
+
+# Local agent / Copilot instruction overlays
+AGENT_INSTRUCTIONS.md
+AGENT_INSTRUCTIONS.json
+.github/copilot-instructions.md
+.github/copilot-instructions.json
+
+# Runtime and local state
+.agent_session/
+logs/
+temp/
+testing_reports/
+runtime.sqlite3
+kalshi_archive.sqlite3
+runtime/
+var/*.sqlite*
+var/*.db
+var/_operator_clear_tombstones.json
+var/datapack_store/ephemeral/
+# Accidental nested run-tree (created when a tool ran with the submodule root as cwd)
+/polyventure/
+# Harness-owned pytest scratch (in-UNC basetemp for diagnostic runs)
+.pytest-harness-tmp/
+.pytest-cache-codex/
+.pytest-tmp/
+
+# Calamum generated outputs
+.calamum/generated/*
+!.calamum/generated/.gitignore
+
+# Editor and OS noise
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Temporary outputs
+*.log
+*.tmp
+*.temp
+*.bak
+# Calamum/pytest scratch dropped in-repo by test definitions (--basetemp/cache_dir).
+# Disposable: authoritative retained evidence lives under .calamum/generated/runs/.
+.tmp-*
+tmppytest-*

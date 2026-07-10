@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+  'setuptools>=77',
+  'wheel',
+]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'polyventure'
+version = '0.1.0'
+description = 'Dry-run-first Polyventure operator shell for a paired YES+NO Kalshi hedge workflow.'
+readme = 'README.md'
+requires-python = '>=3.14,<3.15'
+license = 'Apache-2.0'
+license-files = ['LICENSE']
+authors = [
+  { name = 'Joe Waller' },
+]
+keywords = ['kalshi', 'prediction-markets', 'hedging', 'trading', 'research']
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Intended Audience :: Science/Research',
+  'Programming Language :: Python :: 3.14',
+  'Operating System :: OS Independent',
+  'Topic :: Office/Business :: Financial :: Investment',
+]
+dependencies = [
+  'cryptography>=44,<46',
+  'Pillow>=12.2.0',
+  'pystray>=0.19.5',
+  'requests>=2.32,<3',
+  'websockets>=14,<16',
+]
+
+[project.optional-dependencies]
+dev = [
+  'pytest>=8,<9',
+]
+
+[project.urls]
+Homepage = 'https://github.com/joediggidyyy/polyventure'
+Repository = 'https://github.com/joediggidyyy/polyventure'
+
+[project.scripts]
+polyventure = 'polyventure.cli:main'
+
+[tool.setuptools]
+package-dir = {'' = 'src'}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ['src']
+include = ['polyventure*']

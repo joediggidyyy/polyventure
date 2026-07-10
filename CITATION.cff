@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Polyventure in academic work, please cite it as below."
+title: "Polyventure"
+abstract: "A dry-run-first operator shell implementing a paired YES + NO hedge workflow on Kalshi binary event markets, released for scholarly review and reproducibility."
+type: software
+authors:
+  - family-names: "Waller"
+    given-names: "Joe"
+version: "0.1.0"
+date-released: "2026-07-09"
+license: "Apache-2.0"
+repository-code: "https://github.com/joediggidyyy/polyventure"
+url: "https://github.com/joediggidyyy/polyventure"
+keywords:
+  - "kalshi"
+  - "prediction-markets"
+  - "hedging"
+  - "reproducibility"
+  - "research"
