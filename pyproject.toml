@@ -16,7 +16,7 @@ license-files = ['LICENSE']
 authors = [
   { name = 'Joe Waller' },
 ]
-keywords = ['kalshi', 'prediction-markets', 'hedging', 'trading', 'research']
+keywords = ['kalshi', 'polymath', 'prediction-markets', 'hedging', 'trading', 'research']
 classifiers = [
   'Development Status :: 4 - Beta',
   'Intended Audience :: Science/Research',

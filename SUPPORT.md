@@ -2,8 +2,8 @@
 
 **Document ID**: `POLYVENTURE_SUPPORT`  
 **Status**: Public support guidance  
-**Owner**: ORACL-Prime  
-**Project**: Polyventure  
+**Maintainer**: Joe Waller  
+**Project**: Polyventure / Polymath  
 **Last updated**: 2026-07-09
 
 ---

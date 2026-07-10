@@ -4,6 +4,10 @@
 	<img src="assets/images/polyventure_logo.png" alt="Polyventure logo" width="360">
 </p>
 
+> Dry-run-first Polymath operator shell for paired YES + NO hedge workflows on Kalshi binary event markets.
+
+A [Polymath](https://polymath-global.com) open-source project.
+
 Polyventure is a **dry-run-first operator shell** that implements a paired **YES + NO hedge** workflow on
 Kalshi binary event markets. It scans open markets, ranks candidate pairs by a documented edge model,
 plans hedged orders, and — when explicitly authorized — places and reconciles them, while keeping
@@ -78,6 +82,10 @@ polyventure                          # console entry point (after install)
 Batch/CLI entry points require the operation lane to be stated explicitly rather than inferring it.
 
 ## Test
+
+The public test surface runs with standard `pytest`. The broader Polymath validation posture uses
+[Calamum](https://github.com/joediggidyyy/calamum) as the retained-evidence test runner; this standalone
+review package does not require Calamum to run the included tests.
 
 ```bash
 pytest

@@ -2,8 +2,8 @@
 
 **Document ID**: `POLYVENTURE_CONTRIBUTING`  
 **Status**: Public contributing guidelines  
-**Owner**: ORACL-Prime  
-**Project**: Polyventure  
+**Maintainer**: Joe Waller  
+**Project**: Polyventure / Polymath  
 **Last updated**: 2026-07-09
 
 ---
@@ -12,8 +12,8 @@
   <img src="assets/images/polyventure_logo.png" alt="Polyventure logo" width="200">
 </p>
 
-Thanks for your interest. Polyventure is released for scholarly review and reproducibility. Contributions,
-questions, and reproduction reports are welcome.
+Thanks for your interest. Polyventure is a Polymath open-source project released for scholarly review and
+reproducibility. Contributions, questions, and reproduction reports are welcome.
 
 ## Working root
 
@@ -41,6 +41,9 @@ Run these from the repository root before opening a pull request:
 ```bash
 pytest
 ```
+
+Calamum is the Polymath retained-evidence runner used by the broader development workflow, but this public
+package is intentionally testable with plain `pytest` from a clean clone.
 
 The test suite provisions an ephemeral signing key for the signed-evidence surface, so it runs without any
 real key on disk. Tests that exercise operator-specific developer tooling skip gracefully when that tooling

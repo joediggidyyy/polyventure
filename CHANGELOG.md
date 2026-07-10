@@ -2,8 +2,8 @@
 
 **Document ID**: `POLYVENTURE_CHANGELOG`  
 **Status**: Public change history  
-**Owner**: ORACL-Prime  
-**Project**: Polyventure  
+**Maintainer**: Joe Waller  
+**Project**: Polyventure / Polymath  
 **Last updated**: 2026-07-09
 
 ---
@@ -21,8 +21,8 @@ Initial public release for scholarly review and reproducibility.
 
 ### Added
 
-- the Polyventure application source: a dry-run-first operator shell implementing a paired YES + NO hedge
-  workflow on Kalshi binary event markets (typed config, RSA-PSS request signing, market scanning,
+- the Polyventure application source: a dry-run-first Polymath operator shell implementing a paired YES +
+  NO hedge workflow on Kalshi binary event markets (typed config, RSA-PSS request signing, market scanning,
   deterministic candidate ranking, SQLite-backed persistence, websocket normalization and reconciliation,
   pair planning with partial-fill / one-sided-exposure handling, and a bounded dry-run soak harness)
 - the pytest test suite, which provisions an ephemeral signing key so the signed-evidence surface is

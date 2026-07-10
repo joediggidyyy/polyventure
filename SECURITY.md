@@ -2,8 +2,8 @@
 
 **Document ID**: `POLYVENTURE_SECURITY`  
 **Status**: Public vulnerability reporting  
-**Owner**: ORACL-Prime  
-**Project**: Polyventure  
+**Maintainer**: Joe Waller  
+**Project**: Polyventure / Polymath  
 **Last updated**: 2026-07-09
 
 ---
@@ -14,9 +14,9 @@
 
 ## Scope
 
-Polyventure is a dry-run-first operator shell that implements a paired YES + NO hedge workflow on Kalshi
-binary event markets. It is research and educational software; the live lane places real orders with real
-capital.
+Polyventure is a Polymath dry-run-first operator shell that implements a paired YES + NO hedge workflow on
+Kalshi binary event markets. It is research and educational software; the live lane places real orders with
+real capital.
 
 Security reports are especially valuable for:
 
