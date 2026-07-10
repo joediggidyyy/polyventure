@@ -33,9 +33,6 @@ If someone is being disruptive or harmful, contact the maintainer (see [`SUPPORT
 
 The maintainer may remove content or restrict participation to keep the space safe and productive.
 
-_If you prefer a formal, widely-used policy, the [Contributor Covenant](https://www.contributor-covenant.org)
-may be adopted and linked here._
-
 ---
 
 <p align="center">

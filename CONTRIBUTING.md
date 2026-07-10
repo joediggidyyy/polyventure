@@ -50,8 +50,8 @@ package is intentionally testable with plain `pytest` from a clean clone.
 </p>
 
 The test suite provisions an ephemeral signing key for the signed-evidence surface, so it runs without any
-real key on disk. Tests that exercise operator-specific developer tooling skip gracefully when that tooling
-is not present in this package.
+real key on disk. Tests that exercise optional local tooling skip gracefully when that tooling is not
+present in this package.
 
 ## Design principles to preserve
 
