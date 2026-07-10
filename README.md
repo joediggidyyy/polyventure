@@ -87,6 +87,10 @@ The public test surface runs with standard `pytest`. The broader Polymath valida
 [Calamum](https://github.com/joediggidyyy/calamum) as the retained-evidence test runner; this standalone
 review package does not require Calamum to run the included tests.
 
+<p align="center">
+	<img src="assets/images/calamum_logo_color.png" alt="Calamum retained-evidence test runner" width="220">
+</p>
+
 ```bash
 pytest
 ```
@@ -102,3 +106,9 @@ itself satisfy the long-duration demo gate described in the model doc.
 ## License
 
 Apache-2.0 — see [`LICENSE`](LICENSE).
+
+---
+
+<p align="center">
+	<img src="assets/images/polymath_global.png" alt="Polymath Global" width="260">
+</p>

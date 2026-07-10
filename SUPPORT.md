@@ -33,3 +33,9 @@ their GitHub profile. See [`SECURITY.md`](SECURITY.md) for the vulnerability-rep
 
 This is research and educational software provided as-is. It is not a financial product, and no trading
 outcome, uptime, or individualized support is guaranteed.
+
+---
+
+<p align="center">
+  <img src="assets/images/polymath_global.png" alt="Polymath Global" width="220">
+</p>

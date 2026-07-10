@@ -35,3 +35,9 @@ Initial public release for scholarly review and reproducibility.
 - No credentials, API keys, or signing keys are included. Real-money use requires operator-provided keys.
 - Internal development history, live runtime databases, and retained operational evidence are intentionally
   excluded from this public package; they are not required to build, run (dry-run), or test the software.
+
+---
+
+<p align="center">
+  <img src="assets/images/polymath_global.png" alt="Polymath Global" width="220">
+</p>
