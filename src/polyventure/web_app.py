@@ -538,9 +538,9 @@ def _approved_private_key_roots(*, project_root: Path = PROJECT_ROOT) -> list[tu
   project_parent = project_root.parent
   project_grandparent = project_parent.parent if project_parent.parent != project_parent else None
   register(project_root / 'secrets', 'Project secrets')
-  register(project_parent / 'secrets', 'Workspace secrets')
+  register(project_parent / 'secrets', 'Project-adjacent secrets')
   if project_grandparent is not None:
-    register(project_grandparent / 'secrets', 'Workspace-adjacent secrets')
+    register(project_grandparent / 'secrets', 'Parent project secrets')
 
   return roots
 
@@ -9985,8 +9985,8 @@ def _render_html(
           ? 'The browser lost contact with the current local shell and one bounded helper-assisted relaunch did not restore it.'
           : 'The browser lost contact with the current local shell after repeated same-origin retries.',
         nextAction: helperUsable
-          ? 'Use Recover local shell for one manual helper-assisted relaunch, or relaunch the console from the current workspace. The normal relaunch path will reuse the existing stale-host/orphan cleanup engine before binding a new host.'
-          : 'Relaunch the console from the current workspace to start a fresh host. The normal relaunch path will reuse the existing stale-host/orphan cleanup engine before binding a new host.',
+          ? 'Use Recover local shell for one manual helper-assisted relaunch, or relaunch the console from the current project. The normal relaunch path will reuse the existing stale-host/orphan cleanup engine before binding a new host.'
+          : 'Relaunch the console from the current project to start a fresh host. The normal relaunch path will reuse the existing stale-host/orphan cleanup engine before binding a new host.',
         manualVisible: helperUsable,
       };
     }
@@ -10079,7 +10079,7 @@ def _render_html(
 
     async function invokeRecoveryHelper(mode = 'manual') {
       if (!helperRecoveryIsUsable()) {
-        throw new Error('Automatic recovery did not restore the local host. Relaunch the console from the current workspace to start a fresh host.');
+        throw new Error('Automatic recovery did not restore the local host. Relaunch the console from the current project to start a fresh host.');
       }
       const helperUrl = `${String(RECOVERY_HELPER.url).replace(/\\/$/, '')}/recover?token=${encodeURIComponent(String(RECOVERY_HELPER.token || ''))}&mode=${encodeURIComponent(String(mode || 'manual'))}`;
       const response = await fetch(helperUrl, {
@@ -10115,7 +10115,7 @@ def _render_html(
           setBackendRecoveryState('recovering', {
             message: 'Local host recovery in progress.',
             detail: 'The shell lost contact with the current local host and is requesting one bounded relaunch through the detached launch helper.',
-            nextAction: 'If this does not restore the host, ORACL will leave explicit fallback guidance in Readiness.',
+            nextAction: 'If this does not restore the host, Polyventure will leave explicit fallback guidance in Readiness.',
             inFlight: true,
             manualVisible: false,
           });
@@ -10162,7 +10162,7 @@ def _render_html(
       setBackendRecoveryState('recovering', {
         message: 'Manual local-host recovery in progress.',
         detail: 'The shell is requesting one helper-assisted relaunch through the normal detached launch path.',
-        nextAction: 'If this does not restore the host, relaunch the console from the current workspace.',
+        nextAction: 'If this does not restore the host, relaunch the console from the current project.',
         inFlight: true,
         manualVisible: false,
       });
@@ -20657,9 +20657,9 @@ def create_operator_console_app(
     usability_state = str(usability.get('state') or '').strip().lower()
     recovery_configured = bool(recovery.get('configured'))
     next_action = (
-      'Use Recover local shell for one bounded relaunch, or relaunch the console from the current workspace before relying on this view.'
+      'Use Recover local shell for one bounded relaunch, or relaunch the console from the current project before relying on this view.'
       if recovery_configured
-      else 'Relaunch the console from the current workspace before relying on this view.'
+      else 'Relaunch the console from the current project before relying on this view.'
     )
     if durability_state not in {'degraded', 'lost'} and usability_state != 'session_closed':
       return {
