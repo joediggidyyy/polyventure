@@ -2,8 +2,8 @@
 
 **Document ID**: `POLYVENTURE_CODE_OF_CONDUCT`  
 **Status**: Public community standards  
-**Owner**: ORACL-Prime  
-**Project**: Polyventure  
+**Maintainer**: Joe Waller  
+**Project**: Polyventure / Polymath  
 **Last updated**: 2026-07-09
 
 ---
@@ -35,3 +35,9 @@ The maintainer may remove content or restrict participation to keep the space sa
 
 _If you prefer a formal, widely-used policy, the [Contributor Covenant](https://www.contributor-covenant.org)
 may be adopted and linked here._
+
+---
+
+<p align="center">
+  <img src="assets/images/polymath_global.png" alt="Polymath Global" width="220">
+</p>
