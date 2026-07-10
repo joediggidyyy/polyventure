@@ -45,10 +45,6 @@ pytest
 Calamum is the Polymath retained-evidence runner used by the broader development workflow, but this public
 package is intentionally testable with plain `pytest` from a clean clone.
 
-<p align="center">
-  <img src="assets/images/calamum_logo_color.png" alt="Calamum retained-evidence test runner" width="220">
-</p>
-
 The test suite provisions an ephemeral signing key for the signed-evidence surface, so it runs without any
 real key on disk. Tests that exercise operator-specific developer tooling skip gracefully when that tooling
 is not present in this package.
@@ -80,9 +76,3 @@ Keep public-facing docs:
 
 If you discover a potentially sensitive vulnerability, **do not open a public issue first**. Use the
 private reporting guidance in [`SECURITY.md`](SECURITY.md).
-
----
-
-<p align="center">
-  <img src="assets/images/polymath_global.png" alt="Polymath Global" width="240">
-</p>

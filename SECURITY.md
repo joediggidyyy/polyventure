@@ -81,9 +81,3 @@ When possible, please allow a private remediation window before public disclosur
   provision your own, and you are solely responsible for their protection.
 - Reproduction should be performed dry-run / offline unless you are deliberately and safely exercising a
   sandbox or live lane with your own account.
-
----
-
-<p align="center">
-  <img src="assets/images/polymath_global.png" alt="Polymath Global" width="220">
-</p>
