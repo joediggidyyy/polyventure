@@ -250,7 +250,7 @@ def test_order_sandbox_uses_temp_owned_settings(tmp_path: Path) -> None:
 
 def test_batch_command_without_env_fails_closed(monkeypatch, capsys) -> None:
   # Fail closed; no silent default lane. A bare batch command must refuse and
-  # must not invoke the service.
+  # must not invoke the service. See polyventure/CLAUDE.md.
   called = {'scan': False}
 
   def _should_not_run(**_):

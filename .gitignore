@@ -22,6 +22,12 @@ secrets/kalshi/
 # Private signing keys (public verification keys live in the tracked trust store)
 .secrets/signing/
 
+# Local agent / Copilot instruction overlays
+AGENT_INSTRUCTIONS.md
+AGENT_INSTRUCTIONS.json
+.github/copilot-instructions.md
+.github/copilot-instructions.json
+
 # Runtime and local state
 .agent_session/
 logs/
@@ -34,11 +40,11 @@ var/*.sqlite*
 var/*.db
 var/_operator_clear_tombstones.json
 var/datapack_store/ephemeral/
-# Accidental nested run-tree
+# Accidental nested run-tree (created when a tool ran with the submodule root as cwd)
 /polyventure/
-# Harness-owned pytest scratch
+# Harness-owned pytest scratch (in-UNC basetemp for diagnostic runs)
 .pytest-harness-tmp/
-.pytest-cache-*/
+.pytest-cache-codex/
 .pytest-tmp/
 
 # Calamum generated outputs

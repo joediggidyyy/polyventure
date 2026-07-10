@@ -694,7 +694,7 @@ The application will require the following environment variables:
 | ------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | `KALSHI_ENV`                    | yes      | `demo` or `prod`                                                                                                     |
 | `KALSHI_API_KEY_ID`             | yes      | Kalshi API key identifier                                                                                            |
-| `KALSHI_PRIVATE_KEY_FILE`       | yes      | Absolute or project-relative path to local PEM private-key file                                                      |
+| `KALSHI_PRIVATE_KEY_FILE`       | yes      | Absolute or workspace-relative path to local PEM private-key file                                                    |
 | `KALSHI_PRIVATE_KEY_INLINE`     | no       | Demo-only emergency inline key override; not allowed in steady-state or production                                   |
 | `KALSHI_API_BASE_URL`           | yes      | `https://demo-api.kalshi.co/trade-api/v2` for demo or `https://api.elections.kalshi.com/trade-api/v2` for production |
 | `KALSHI_WEBSOCKET_URL`          | yes      | Demo or production websocket endpoint                                                                                |
@@ -863,7 +863,7 @@ Required rules:
 
 ## Polymath Security Alignment
 
-Version 1 must align with the following Polymath-level security expectations.
+Version 1 must align with the following Polymath-level security expectations drawn from local repository guidance.
 
 ### Security invariants
 
@@ -1679,9 +1679,9 @@ The system may continue reconciling and canceling after the entry window closes,
 
 Version 1 testing must include cross-validated execution through the externally installed `calamum` orchestrator.
 
-This is specifically valuable because Polyventure consumes Calamum as an external retained-evidence harness.
+This is specifically valuable because this workspace is an adoption environment outside the Calamum development repository.
 
-The plan must therefore treat Calamum as an external validation dependency, not merely as an implementation detail.
+The plan must therefore treat Calamum as an external retained-evidence harness, not merely as an implementation detail inside its own source tree.
 
 ### Calamum command surface used by this plan
 

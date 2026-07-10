@@ -289,7 +289,7 @@ def _acquire_console_launch_lock_details(*, workspace_root: Path) -> dict[str, A
           pass
         continue
       raise RuntimeError(
-        'A detached Polyventure console launch is already in progress for this project. Wait for the earlier attempt to finish before retrying.'
+        'A detached Polyventure console launch is already in progress for this workspace. Wait for the earlier attempt to finish before retrying.'
       )
 
 
@@ -1371,7 +1371,7 @@ def _create_console_recovery_helper_app(
             'decision': 'launch_blocked',
             'reason': 'recovery_helper_token_mismatch',
             'message': 'The local recovery helper rejected the current browser token.',
-            'next_action': 'Relaunch the console from the current project to start a fresh host.',
+            'next_action': 'Relaunch the console from the current workspace to start a fresh host.',
           },
           status='403 Forbidden',
         )
@@ -1382,7 +1382,7 @@ def _create_console_recovery_helper_app(
             'decision': 'launch_blocked',
             'reason': 'recovery_helper_expired',
             'message': 'The local recovery helper expired before recovery was requested.',
-            'next_action': 'Relaunch the console from the current project to start a fresh host.',
+            'next_action': 'Relaunch the console from the current workspace to start a fresh host.',
           },
           status='410 Gone',
         )
@@ -1415,7 +1415,7 @@ def _create_console_recovery_helper_app(
             'decision': 'launch_blocked',
             'reason': 'helper_recovery_failed',
             'message': str(exc),
-            'next_action': 'Relaunch the console from the current project to start a fresh host.',
+            'next_action': 'Relaunch the console from the current workspace to start a fresh host.',
           },
         )
       return _helper_json_response(
@@ -2973,7 +2973,8 @@ def _require_cli_lane_settings(env_value: str | None):
 
   The lane must be stated explicitly via --env {demo,prod} (demo = sandbox lane,
   prod = live lane). There is no default: a bare batch command refuses rather
-  than inferring a lane. The resolved Settings carries the correct lane, Kalshi
+  than inferring a lane. See polyventure/CLAUDE.md (fail closed; no silent
+  fallbacks). The resolved Settings carries the correct lane, Kalshi
   environment, endpoint, and lane-scoped credentials.
   """
   lane = _CLI_ENV_TO_LANE.get(str(env_value or '').strip().lower())

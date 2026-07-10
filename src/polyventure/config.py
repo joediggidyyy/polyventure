@@ -448,10 +448,10 @@ def settings_for_lane(base: Settings, lane: str) -> Settings:
   lane explicitly. The Kalshi environment, REST base URL, and active websocket
   endpoint are derived from the lane — never carried over from a stale base.
 
-  Fail-closed credential rule: for the live lane the API key id and private key
-  path come strictly from the live-scoped fields with no fallback to the
-  generic/sandbox fields. The sandbox lane may use the generic fields, which are
-  themselves sandbox-scoped.
+  Fail-closed credential rule (see polyventure/CLAUDE.md): for the live lane the
+  API key id and private key path come strictly from the live-scoped fields with
+  no fallback to the generic/sandbox fields. The sandbox lane may use the
+  generic fields, which are themselves sandbox-scoped.
   """
   normalized = str(lane or '').strip().lower()
   if normalized not in {'sandbox', 'live'}:
